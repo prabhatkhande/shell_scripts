@@ -7,7 +7,7 @@ function addition() {
 	read $2
 	echo -n "Enter second number : "
 	read $3
-	result=$(($2 + $3))	
+	result=$(("$2" + "$3"))	
 	echo "Sum of two numbers is : $result"
 
 }
@@ -17,7 +17,7 @@ function subtract() {
         read $2
         echo -n "Enter second number : "
         read $3
-        result=$(($2 - $3))
+        result=$(("$2" - "$3"))
         echo "Subtraction of two numbers is : $result"
 }
 
@@ -26,7 +26,7 @@ function multiply() {
         read $2
         echo -n "Enter second number : "
         read $3
-        result=$(($2 * $3))
+        result=$(("$2" * "$3"))
         echo "Multiplication of two numbers is : $result"
 }
 
@@ -35,7 +35,7 @@ function division() {
         read $2
         echo -n "Enter second number : "
         read $3
-        result=$(($2 / $3))
+        result=$(("$2" / "$3"))
         echo "Division of two numbers is : $result"
 }
 
@@ -44,7 +44,7 @@ function percent() {
         read $2
         echo -n "Enter total marks : "
         read $3
-        result=$((100*$2 / $3))
+        result=$((100*"$2" / "$3"))
         echo "Percentage of given number is : $result"
 }
 
