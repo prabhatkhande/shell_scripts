@@ -26,5 +26,5 @@ jobs:
       - uses: actions/checkout@v4.1.7
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: ./hello-world.sh
+      - name: Run Shell Script File
+        run: ./user_input.sh
