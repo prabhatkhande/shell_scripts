@@ -38,5 +38,4 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Run Shell Script
-        run: ./shell_scripts/calculator.sh ${{ github.event.inputs.operation }}
-        working-directory: ./shell_scripts
+        run: calculator.sh ${{ github.event.inputs.operation }}
