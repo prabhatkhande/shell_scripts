@@ -15,7 +15,7 @@ on:
         description: 'select any arithmatic operation'
         required: True
         default: 'addition'
-        type: choice
+        type: string
         options:
           - 'addition'
           - 'subtraction'
@@ -38,4 +38,5 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Run Shell Script
-        run: ./calculator.sh {{ github.event.environment }} environment
+        run: |
+              ./calculator.sh "${{ github.event.inputs.environment }}" 
