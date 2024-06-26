@@ -27,5 +27,5 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Run Shell Script File
-        run: ./calculator.sh a 10 20
+        run: ./loop.sh 2
         shell: bash
