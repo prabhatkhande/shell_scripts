@@ -18,6 +18,10 @@ on:
         type: choice
         options:
           - 'addition'
+          - 'subtraction'
+          - 'multiply'
+          - 'division'
+          - 'percent'
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -35,4 +39,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run Shell Script
         run: |
-              bash add.sh "${{ github.inputs.environment }}" 
+              bash calculator.sh "${{ github.inputs.environment }}" 
