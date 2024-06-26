@@ -41,3 +41,4 @@ jobs:
         run: |
           chmod +x ./shell_scripts/calculator.sh
           ./shell_scripts/calculator.sh ${{ github.event.inputs.operation }}
+        working-directory: ./shell_scripts
