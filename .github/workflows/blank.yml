@@ -15,7 +15,7 @@ on:
         description: 'select any arithmatic operation'
         required: True
         default: 'addition'
-        type: string
+        type: choice
         options:
           - 'addition'
           - 'subtraction'
