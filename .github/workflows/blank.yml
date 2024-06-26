@@ -38,7 +38,5 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Run Shell Script
-        run: |
-          chmod +x ./shell_scripts/calculator.sh
-          ./shell_scripts/calculator.sh ${{ github.event.inputs.operation }}
+        run: ./shell_scripts/calculator.sh ${{ github.event.inputs.operation }}
         working-directory: ./shell_scripts
