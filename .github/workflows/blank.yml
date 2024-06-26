@@ -39,4 +39,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run Shell Script
         run: |
-              ./calculator.sh "${{ github.inputs.environment }}" 
+              ./calculator.sh "${{ github.workflow_dispatch.inputs.environment }}" 
