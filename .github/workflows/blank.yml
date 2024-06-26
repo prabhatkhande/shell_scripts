@@ -11,8 +11,8 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      environment:
-        description: 'select any arithmatic operation'
+      operation:
+        description: 'Select any arithmetic operation'
         required: True
         default: 'addition'
         type: choice
@@ -39,4 +39,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run Shell Script
         run: |
-              bash calculator.sh "${{ github.inputs.environment }}" 
+              calculator.sh "${{ github.inputs.operation }}"
