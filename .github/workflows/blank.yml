@@ -15,12 +15,12 @@ on:
         description: 'select any arithmatic operation'
         required: True
         default: addition
-        type: string
+        type: 'string'
         options:
-          - 'addition'
-          - 'subtraction'
-          - 'multiply'
-          - 'division'
+          - addition
+          - subtraction
+          - multiply
+          - division
           - 'percent'
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -38,4 +38,4 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Run Shell Script
-        run: calculator.sh ${{ github.event.inputs.operation }}
+        run: calculator.sh ${{ github.event.inputs.operation.options }}
