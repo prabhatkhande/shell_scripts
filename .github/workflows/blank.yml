@@ -24,8 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4.1.7
-      - uses: jdickey/bash@v.1.1.1
+      
       # Runs a single command using the runners shell
       - name: Run Shell Script File
-        run: ./user_input.sh
+        run: ./calculator.sh
         shell: bash
