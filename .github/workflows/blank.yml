@@ -36,4 +36,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run Shell Script
         run: |
-              ./calculator.sh "${{ github.inputs.operation }}" 10 20
+              ./calculator.sh "${{ github.event.inputs.operation }}" 10 20
