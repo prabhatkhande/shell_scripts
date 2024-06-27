@@ -14,7 +14,7 @@ on:
       operation:
         description: 'Select any arithmetic operation'
         required: True
-        type: choice
+        type: string
         options:
           - 'addition'
           - 'subtract'
@@ -36,4 +36,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run Shell Script
         run: |
-              ./calculator.sh $options 10 20 "${{ github.inputs.operation.options }}"
+              ./calculator.sh "${{ github.inputs.operation }}" 10 20
