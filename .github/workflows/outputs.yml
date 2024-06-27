@@ -1,0 +1,25 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      myOutput: ${{ steps.step1.outputs.someOutput }}
+    steps:
+      - name: Step 1
+        id: step1
+        run: echo "::set-output name=someOutput::Hello from Step 1"
+      - name: Step 2
+        run: echo "Output from Step 1:" "${{ steps.step1.outputs.someOutput }}"
+  
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 3
+        run: echo "Output from Job 1:" "${{ needs.job1.outputs.myOutput }}"
