@@ -20,6 +20,13 @@ on:
           - 'subtract'
           - 'multiply'
           - 'divide'
+      param1:
+        description: 'First Number'
+        required: True
+      param2:
+        description: 'Second Number'
+        required: True
+     
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -37,4 +44,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run Shell Script
         run: |
-              ./calculator.sh "${{ github.event.inputs.operation }}" 10 20
+              ./calculator.sh "${{ github.event.inputs.operation }}" "${{github.event.inputs.param1}}" "${{github.event.inputs.param2}}"
